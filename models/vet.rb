@@ -23,4 +23,6 @@ class Vet
         sql = "DELETE FROM vets"
         SqlRunner.run(sql)
     end
+
+
 end
