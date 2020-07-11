@@ -1,3 +1,4 @@
+
 DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS vets;
 
@@ -16,4 +17,5 @@ CREATE TABLE pets(
     treatment_notes VARCHAR(255),
     vet_id INT REFERENCES vets(id) ON DELETE CASCADE
 );
+
 
