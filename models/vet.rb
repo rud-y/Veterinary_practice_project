@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+
 class Vet 
 
     attr_reader :id
@@ -32,6 +33,12 @@ class Vet
         vet = SqlRunner.run(sql, values).first
         result = Vet.new(vet)
         return result
+    end
+
+    def delete()
+        sql = "DELETE FROM vets WHERE id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
     end
 
     def self.delete_all()
