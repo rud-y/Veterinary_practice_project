@@ -20,6 +20,14 @@ class Vet
         @id = result['id'].to_i
     end
 
+    def update()
+        sql = "UPDATE vets SET (first_name, last_name, phone_number) = 
+        ($1, $2, $3) WHERE id = $4"
+        values = [@first_name, @last_name, @phone_number, @id]
+        SqlRunner.run(sql,values)
+    end
+
+
     def Vet.find_all()
         sql = "SELECT * FROM vets"
         all_vets = SqlRunner.run(sql)
