@@ -19,10 +19,24 @@ class Vet
         @id = result['id'].to_i
     end
 
+    def Vet.find_all()
+        sql = "SELECT * FROM vets"
+        all_vets = SqlRunner.run(sql)
+        result = all_vets.map{|vet| Vet.new(vet)}
+        return result
+    end
+
+    def Vet.find(id)
+        sql = "SELECT * from vets WHERE id = $1"
+        values = [id]
+        vet = SqlRunner.run(sql, values).first
+        result = Vet.new(vet)
+        return result
+    end
+
     def self.delete_all()
         sql = "DELETE FROM vets"
         SqlRunner.run(sql)
     end
-
 
 end
