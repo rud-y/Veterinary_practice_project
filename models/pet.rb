@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner')
-require_relative('./customer')
+
 class Pet 
 
     attr_reader :id
@@ -15,7 +15,7 @@ class Pet
         @customer_id = options['customer_id']
     end
 
-    def save()##
+    def save()
         sql = "INSERT INTO pets (name, type, date_of_birth, treatment_notes, vet_id, customer_id)
         VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
         values = [@name, @type, @date_of_birth, @treatment_notes, @vet_id, @customer_id]
