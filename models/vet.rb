@@ -54,4 +54,13 @@ class Vet
         SqlRunner.run(sql)
     end
 
+    def pets()
+        sql = "SELECT pets.* FROM pets WHERE vet_id = $1"
+        values = [@id]
+        result = SqlRunner.run(sql, values)
+        pets = result.map {|pet| Pet.new(pet)}
+        return pets
+    end
+
+
 end

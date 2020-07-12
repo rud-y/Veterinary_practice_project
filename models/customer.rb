@@ -55,13 +55,17 @@ class Customer
         SqlRunner.run(sql)
     end
 
-    def pets()###
+    def pets()
         sql = "SELECT pets.* FROM pets
         WHERE customer_id = $1"
         values = [@id]
         result = SqlRunner.run(sql, values)
         pets = result.map{|pet| Pet.new(pet)}
         return pets
+    end
+
+    def pet_count()
+        return pets().count
     end
 
 end
