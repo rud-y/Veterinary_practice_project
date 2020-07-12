@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./pet')
 
 class Customer 
 
@@ -54,5 +55,14 @@ class Customer
         sql = "DELETE FROM customers"
         SqlRunner.run(sql)
     end
+
+    # def pets()###
+    #     sql = "SELECT pets.* FROM pets
+    #     WHERE customer_id = $1"
+    #     values(@id)
+    #     result = SqlRunner.run(sql, values)
+    #     pets = result.map{|pet| Pet.new(pet)}
+    #     return pets
+    # end
 
 end
