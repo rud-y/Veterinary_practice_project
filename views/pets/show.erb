@@ -1,0 +1,9 @@
+<div class="single-item">
+<h3><%= @pet.name %> </h3>
+<p>Type: <%= @pet.type%> </p>
+<p>Born: <%= @pet.date_of_birth %> </p>
+<p>Treatment notes: <%= @pet.treatment_notes %> </p>
+<p>Owner: <a href="/@pet.customer_id %>"><%= @pet.customer_id%></a></p>
+</div>
+
+<p id="back"><a href="/pets">Back to pets</a></p>

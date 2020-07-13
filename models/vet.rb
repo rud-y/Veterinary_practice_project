@@ -62,5 +62,8 @@ class Vet
         return pets
     end
 
+    def pet_count()
+        return pets().count
+    end
 
 end

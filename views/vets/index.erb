@@ -1,12 +1,8 @@
-<h1>Vets</h1>
-<div class="vet-list">
+<h2>Our Vets</h2>
+<div class="list">
 
 <% @vets.each do |vet| %>
-<h2><%= vet.last_name %> <%= vet.first_name %></h2>
-<p> <%= vet.phone_number %> </p>
-
-
+<h3><a href="/vets/<%=vet.id%>"><%= vet.first_name %> <%= vet.last_name %></a></h3>
 <% end %>
-
 </div>
 
