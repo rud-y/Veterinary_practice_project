@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang ="en">
-<head>
-  <title>Vet Practice</title>
-  
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vet Practice Edivet</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+  <h1>Edivet - Veterinary Practice</h2>
 
-  <%= yield %>
+  <nav>
+    <ul>
+      <li>
+        <a href="/vets">Vets</a>
+      </li>
+      <li>
+      <a href="/pets">Pets</a>
+    </li>
+    </ul>
+    </nav>
 
-</body>
+    <%= yield %>
+  </body>
 </html>

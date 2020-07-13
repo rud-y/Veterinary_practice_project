@@ -1,12 +1,12 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('../models/vet')
+require_relative('../models/vet.rb')
 also_reload('../models/*')
 
 
 get '/vets' do 
     @vets = Vet.find_all()
-    erb (:"vets/index")
+    erb(:"vets/index")
 end
 
 # get 'vets/:id' do 

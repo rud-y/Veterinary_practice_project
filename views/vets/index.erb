@@ -1,10 +1,12 @@
-<h1>Edivet Vets</h1>
+<h1>Vets</h1>
+<div class="vet-list">
 
-<ul>
-<li>
-<% for vet in @vets %>
-<a href = "<%"><%= vet.first_name %>|<%= vet.last_name %></a>
+<% @vets.each do |vet| %>
+<h2><%= vet.last_name %> <%= vet.first_name %></h2>
+<p> <%= vet.phone_number %> </p>
+
+
 <% end %>
-</li>
-</ul>
+
+</div>
 
