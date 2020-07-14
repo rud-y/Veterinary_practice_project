@@ -1,0 +1,16 @@
+<h3>Edit contact details of <%= @vet.first_name %> <%= @vet.last_name %>:</h3>
+
+
+<form id="form" method="post" action="/vets/<%= @vet.id %>">
+<label for="f-name-field">First name</label>
+<input type="text" id="f-name-field" name="first_name" value="<%= @vet.first_name %>">
+
+<label for="l-name-field">Last name</label>
+<input type="text" id="l-name-field" name="last_name" value="<%= @vet.last_name %>">
+
+<label for="phon-field">Phone number</label>
+<input type="text" id="phon-field" name="phone_number" value="<%= @vet.phone_number %>">
+
+
+<input type="submit" value="Submit changes">
+</form>

@@ -1,0 +1,18 @@
+<h3>Edit contact details of <%= @customer.first_name %> <%= @customer.last_name %>:</h3>
+
+
+<form id="form" method="post" action="/customers/<%= @customer.id %>">
+<label for="first-name-field">First name</label>
+<input type="text" id="first-name-field" name="first_name" value="<%= @customer.first_name %>">
+
+<label for="last-name-field">Last name</label>
+<input type="text" id="last-name-field" name="last_name" value="<%= @customer.last_name %>">
+
+<label for="phone-field">Phone number</label>
+<input type="text" id="phone-field" name="phone_number" value="<%= @customer.phone_number %>">
+
+<label for="email-field">E-mail</label>
+<input type="text" id="email-field" name="e_mail" value="<%= @customer.e_mail %>">
+
+<input type="submit" value="Submit changes">
+</form>

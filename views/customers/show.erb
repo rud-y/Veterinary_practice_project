@@ -4,4 +4,9 @@
 <p>e-mail: <%= @customer.e_mail %> </p>
 </div>
 
+<p><a href="/customers/<%= @customer.id %>/edit">Edit details</a></p>
+<form method="post" action="/customers/<%= @customer.id %>/delete">
+<input type="submit" value="Delete customer">
+</form>
+
 <p id="back"><a href="/customers">Back to customers</a></p>

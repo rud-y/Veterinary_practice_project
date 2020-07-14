@@ -1,0 +1,10 @@
+<h3>Edit Treatment information for <%= @pet.name %></h3>
+
+
+<form id="form" method="post" action="/pets/<%= @pet.id %>">
+<label for="treatment-notes">Treatment Notes</label>
+<input type="text" id="treatment-notes" name="treatment_notes" value="<%= @pet.treatment_notes %>">
+
+
+<input type="submit" value="Submit">
+</form>
