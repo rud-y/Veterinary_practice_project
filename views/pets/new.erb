@@ -1,0 +1,33 @@
+<h2>Add new pet</h2>
+
+<form id="form" method="post" action="/pets">
+<label for="name-field">Name</label>
+<input type="text" id="name-field" name="name">
+
+<label for="type-field">Type:</label>
+<input type="text" id="type-field" name="type">
+
+<label for="born-field">Born:</label>
+<input type="text" id="born-field" name="date_of_birth">
+
+<label for="notes-field">Treatment notes:</label>
+<input type="text" id="notes-field" name="treatment_notes">
+
+<label for="vet-select">Choose from vets:</label>
+<select id="vet-select" name="vet_id">
+    <% @vets.each do |vet| %>
+        <option value=<%= vet.id %>> <%= vet.first_name %> <%= vet.last_name %> </option>
+    <% end %>
+</select>
+
+<label for="customer-select">Owner:</label>
+<select id="customer-select" name="customer_id">
+    <% @customers.each do |customer| %>
+        <option value=<%= customer.id %>> <%= customer.first_name %> <%= customer.last_name %> </option>
+    <% end %>
+</select>
+
+
+
+<input type="submit" value="Add Pet">
+</form>

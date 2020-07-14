@@ -56,8 +56,21 @@ class Pet
         SqlRunner.run(sql)
     end
 
-    
-   
+    def customer()
+        sql = "SELECT * FROM customers
+        WHERE id = $1"
+        values = [@customer_id]
+        result = SqlRunner.run( sql, values).first
+        return Customer.new(result)
+    end
+
+    def vet()
+        sql = "SELECT * FROM vets
+        WHERE id = $1"
+        values = [@vet_id]
+        result = SqlRunner.run( sql, values).first
+        return Vet.new(result)
+    end
 
 
 end
