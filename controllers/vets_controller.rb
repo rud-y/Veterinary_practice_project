@@ -30,7 +30,9 @@ get '/vets/:id/edit' do #Edit
 end
 
 post '/vets/:id' do #Update
-    @vet = Vet.new(params) 
+    @vet = Vet.find(params['id'])
+    @vet.last_name = params['last_name']
+    @vet.phone_number = params['phone_number']
     @vet.update
     redirect to "vets/#{params['id']}"
 end

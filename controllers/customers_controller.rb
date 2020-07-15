@@ -23,13 +23,16 @@ post '/customers' do
 end
 
 get '/customers/:id/edit' do #Edit-form
-    @pets = Pet.find_all()
-    @customer = Customer.find(params['id'].to_i)
+    # @pets = Pet.find_all()
+    @customer = Customer.find(params['id'])
     erb(:"customers/edit")
 end
 
 post '/customers/:id' do #Update
     @customer = Customer.find(params['id']) #Customer.find(id)
+    @customer.last_name = params['last_name']
+    @customer.phone_number = params['phone_number']
+    @customer.e_mail = params['e_mail']
     @customer.update
     redirect to "customers/#{params['id']}"
 end

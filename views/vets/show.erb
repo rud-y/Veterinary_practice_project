@@ -1,7 +1,9 @@
 <div class="single-item">
 <h3><%= @vet.first_name %> <%= @vet.last_name %> </h3>
 <p>Contact: <%= @vet.phone_number %></p>
-<p>Assigned: <a><%= @vet.pet_count %> pets </a></p>
+
+<p>Assigned: <a href=""></a></p>
+
 
 <p><a href="/vets/<%= @vet.id %>/edit">Edit details</a></p>
 <form method="post" action="/vets/<%= @vet.id %>/delete">
