@@ -1,4 +1,4 @@
-<h3>Edit Treatment information for <%= @pet.name %></h3>
+<h3>Edit information for <%= @pet.name %></h3>
 
 
 <form id="form" method="post" action="/pets/<%= @pet.id %>">
@@ -6,5 +6,12 @@
 <input type="text" id="treatment-notes" name="treatment_notes" value="<%= @pet.treatment_notes %>">
 
 
-<input type="submit" value="Submit">
+<label for="vet-select">Change vet:</label>
+<select id="vet-select" name="vet_id">
+    <% @vets.each do |vet| %>
+        <option <%= "selected" if @pet.vet_id == vet.id %>><%= vet.first_name %> <%= vet.last_name %></option>
+    <% end %>
+</select>
+
+<input type="submit" value="Submit changes">
 </form>

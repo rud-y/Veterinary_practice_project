@@ -17,28 +17,28 @@ end
 
 get '/pets/:id' do 
     @pet = Pet.find(params['id'].to_i)
-    
     erb(:"pets/show")
 end
 
-post '/pets' do 
+post '/pets' do #Create,save new
     Pet.new(params).save
     redirect to "/pets"
 end
 
 get '/pets/:id/edit' do 
     @pet = Pet.new(params['id'])
+    @vets = Vet.find_all()
     erb(:"pets/edit")
 end
 
 post '/pets/:id' do  
-    @pet = Pet.new(params)
+    @pet = Pet.new(params['treatment_notes'],params['vet_id'])
     @pet.update
     redirect to "/pets/#{params['id']}"
 end
  
-post '/vets/:id/delete' do
-    @vet = Vet.find(params['id'])
-    @vet.delete
-    redirect to '/vets'
+post '/pets/:id/delete' do
+    @pet = Pet.find(params['id'])
+    @pet.delete
+    redirect to '/pets'
 end

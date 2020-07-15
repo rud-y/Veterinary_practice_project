@@ -24,9 +24,9 @@ class Pet
     end
 
     def update()
-        sql = "UPDATE  pets SET (treatment_notes, vet_id, customer_id) 
-        = ($1, $2, $3) WHERE id = $4"
-        values = [@treatment_notes, @vet_id, @customer_id, @id]
+        sql = "UPDATE  pets SET (treatment_notes, vet_id) 
+        = ($1, $2) WHERE id = $3"
+        values = [@treatment_notes, @vet_id, @id]
         SqlRunner.run(sql, values)
     end
 
@@ -57,20 +57,13 @@ class Pet
     end
 
     def customer()
-        sql = "SELECT * FROM customers
-        WHERE id = $1"
-        values = [@customer_id]
-        result = SqlRunner.run( sql, values).first
-        return Customer.new(result)
+        customer = Customer.find(customer_id)
+        return customer
     end
 
     def vet()
-        sql = "SELECT * FROM vets
-        WHERE id = $1"
-        values = [@vet_id]
-        result = SqlRunner.run( sql, values).first
-        return Vet.new(result)
+        vet = Vet.find(vet_id)
+        return vet
     end
-
 
 end
