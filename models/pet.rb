@@ -11,8 +11,8 @@ class Pet
         @type = options['type']
         @date_of_birth = options['date_of_birth']
         @treatment_notes = options['treatment_notes']
-        @vet_id = options['vet_id']
-        @customer_id = options['customer_id']
+        @vet_id = options['vet_id'].to_i
+        @customer_id = options['customer_id'].to_i
     end
 
     def save()
