@@ -15,6 +15,7 @@ end
 
 get '/vets/:id' do 
     @vet = Vet.find(params['id'].to_i)
+    @pets = Pet.find_all
     erb(:"vets/show")
 end
 
