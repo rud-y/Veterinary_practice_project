@@ -21,7 +21,6 @@ end
 
 post '/vets' do 
     Vet.new(params).save
-
     redirect to '/vets'
 end
 

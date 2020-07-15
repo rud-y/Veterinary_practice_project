@@ -26,7 +26,7 @@ post '/pets' do #Create,save new
 end
 
 get '/pets/:id/edit' do 
-    @pet = Pet.new(params['id'])
+    @pet = Pet.find(params['id'])
     @vets = Vet.find_all()
     erb(:"pets/edit")
 end
