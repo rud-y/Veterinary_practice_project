@@ -32,7 +32,9 @@ get '/pets/:id/edit' do
 end
 
 post '/pets/:id' do  
-    @pet = Pet.new(params['treatment_notes'],params['vet_id'])
+    @pet = Pet.find(params['id'])
+    @pet.treatment_notes = params['treatment_notes']
+    @pet.vet_id = params['vet_id']
     @pet.update
     redirect to "/pets/#{params['id']}"
 end
