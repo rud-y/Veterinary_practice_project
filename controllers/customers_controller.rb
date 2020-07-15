@@ -29,7 +29,7 @@ get '/customers/:id/edit' do #Edit-form
 end
 
 post '/customers/:id' do #Update
-    @customer = Customer.new(params) 
+    @customer = Customer.find(params['id']) #Customer.find(id)
     @customer.update
     redirect to "customers/#{params['id']}"
 end

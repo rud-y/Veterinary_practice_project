@@ -20,18 +20,18 @@ get '/pets/:id' do
     erb(:"pets/show")
 end
 
-post '/pets' do #Create,save new
+post '/pets' do 
     Pet.new(params).save
     redirect to "/pets"
 end
 
 get '/pets/:id/edit' do 
-    @pet = Pet.find(params['id'])
+    @pet = Pet.find(params['id']) #<<
     @vets = Vet.find_all()
     erb(:"pets/edit")
 end
 
-post '/pets/:id' do  
+post '/pets/:id' do  #<<Update
     @pet = Pet.find(params['id'])
     @pet.treatment_notes = params['treatment_notes']
     @pet.vet_id = params['vet_id']

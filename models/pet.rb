@@ -57,12 +57,12 @@ class Pet
     end
 
     def customer()
-        customer = Customer.find(customer_id)
+        customer = Customer.find(@customer_id)
         return customer
     end
 
     def vet()
-        vet = Vet.find(vet_id)
+        vet = Vet.find(@vet_id)
         return vet
     end
 
