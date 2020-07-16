@@ -3,24 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Vet Practice Edivet</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-  <h2>Edivet - Veterinary Practice</h2>
+  <h2 id="main-header">Edivet - Veterinary Practice</h2>
 
-  <nav>
+  <nav id="menu">
     <ul>
-      <li>
-        <a href="/vets">Vets</a>
-      </li>
-      <li>
-        <a href="/pets">Pets</a>
+        <li class="m-item">
+          <a href="/vets">Vets</a>
         </li>
-        <li>
+      
+        <li class="m-item">
+          <a href="/pets">Pets</a>
+        </li>
+      
+        <li class="m-item">
             <a href="/customers">Customers</a>
         </li>
     </ul>
     </nav>
+    <hr>
 
     <%= yield %>
   </body>

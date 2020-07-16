@@ -25,9 +25,8 @@
     <% @customers.each do |customer| %>
         <option value=<%= customer.id %>> <%= customer.first_name %> <%= customer.last_name %> </option>
     <% end %>
-</select>
+</select><br>
 
 
-
-<input type="submit" value="Add Pet">
+<input id="btn" type="submit" value="Add Pet">
 </form>

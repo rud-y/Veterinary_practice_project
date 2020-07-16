@@ -5,5 +5,6 @@ require_relative('controllers/pets_controller')
 require_relative('controllers/customers_controller')
 
 get '/' do
-  erb(:layout )
+  @vets = Vet.find_all()
+  erb(:"vets/index")
 end
