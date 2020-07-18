@@ -15,7 +15,8 @@ CREATE TABLE customers(
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     phone_number VARCHAR(255),
-    e_mail VARCHAR(255)
+    e_mail VARCHAR(255),
+    registered BOOLEAN 
 );
 
 CREATE TABLE pets(

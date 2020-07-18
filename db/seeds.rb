@@ -28,7 +28,13 @@ pet1 = Pet.new({ 'name' => 'Chichi', 'type' => 'cat', 'date_of_birth' => 'Februa
 pet2 = Pet.new({ 'name' => 'Rosie',  'type' => 'dog', 'date_of_birth' => 'October 2019', 'treatment_notes' => 'Food supplements', 'vet_id' => vet1.id, 'customer_id' => customer2.id })
 pet3 = Pet.new({ 'name' => 'Dodo',  'type' => 'parrot', 'date_of_birth' => 'August 2011', 'treatment_notes' => 'All good', 'vet_id' => vet1.id, 'customer_id' => customer3.id })
 pet4 = Pet.new({ 'name' => 'Zeus',  'type' => 'dog', 'date_of_birth' => 'March 2016', 'treatment_notes' => 'Plenty of bones and skins', 'vet_id' => vet3.id, 'customer_id' => customer1.id })
-pet5 = Pet.new({ 'name' => 'Cali',  'type' => 'mouse', 'date_of_birth' => 'April 2015', 'treatment_notes' => 'Take it easy', 'vet_id' => vet4.id, 'customer_id' => customer3.id })
+pet5 = Pet.new({
+    'name' => 'Cali',
+    'type' => 'mouse',
+    'date_of_birth' => 'April 2015',
+    'treatment_notes' => 'digestion granules',
+    'vet_id' => vet4.id,
+    'customer_id' => customer3.id })
 pet1.save()
 pet2.save()
 pet3.save()

@@ -8,9 +8,9 @@
 </div>
 
 
-<p><a href="/pets/<%= @pet.id %>/edit">Edit</a></p>
+<button><a href="/pets/<%= @pet.id %>/edit">Edit</a></button>
 <form method="post" action="/pets/<%= @pet.id %>/delete">
-<input type="submit" value="Delete Pet">
-</form>
+<input id="del" type="submit" value="Delete Pet">
+</form><br>
 
 <p id="back"><a href="/pets">Back to pets</a></p>

@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Customer 
 
     attr_reader :id
-    attr_accessor :first_name, :last_name, :phone_number, :e_mail
+    attr_accessor :first_name, :last_name, :phone_number, :e_mail, :registered
 
     def initialize (options)
         @id = options['id'].to_i if options['id']
@@ -11,12 +11,13 @@ class Customer
         @last_name = options['last_name']
         @phone_number = options['phone_number']
         @e_mail = options['e_mail']
+        @registered = options['registered']
     end
 
     def save()
-        sql = "INSERT INTO customers (first_name, last_name, phone_number, e_mail)
-        VALUES ($1, $2, $3, $4) RETURNING id"
-        values = [@first_name, @last_name, @phone_number, @e_mail]
+        sql = "INSERT INTO customers (first_name, last_name, phone_number, e_mail, registered)
+        VALUES ($1, $2, $3, $4, $5) RETURNING id"
+        values = [@first_name, @last_name, @phone_number, @e_mail, @registered = false]
         result = SqlRunner.run(sql, values).first
         @id = result['id'].to_i
     end
@@ -64,4 +65,7 @@ class Customer
         return pets
     end
 
+    def register()
+        
+    end
 end
