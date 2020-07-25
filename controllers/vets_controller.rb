@@ -7,6 +7,7 @@ also_reload('../models/*')
 get '/vets' do 
     @vets = Vet.find_all()
     erb(:"vets/index")
+    ##@title = "Welcome to Edinburgh Broughton Family Vet Practice/shop"
 end
 
 get '/vets/new' do 

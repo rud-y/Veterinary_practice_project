@@ -7,4 +7,5 @@ require_relative('controllers/customers_controller')
 get '/' do
   @vets = Vet.find_all()
   erb(:"vets/index")
+  
 end

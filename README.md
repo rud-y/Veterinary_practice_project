@@ -1,10 +1,22 @@
 # Veterinary Pracice project #
 
-Summary and How to Run:
+The Edivet Veterinary Practice  is a vet practice app that is designed to be used by a receptionist employee at the vet practice. 
 
--- Veterinary Practice application is to be used by any vet-practice receptionists (or vet employees themselves). It is designed for admitting,registering customers and their pets, recording notes about their treatment. 
 
--- The app is run via app.rb file, supposing Ruby, PostgreSQL, and Sinatra are installed
+For the app to be running the following must be installed:
+	○ PostgreSql 
+	○ Ruby  (we will need to install additional 'gems' in terminal:
+		▪ 'gem install pg'
+		▪ 'gem install sinatra'
+
+
+
+How to Run:
+
+First clone the project to the local machine.
+In your machine terminal create database veterinary_practice by typing 'create db veterinary_practice' . After that navigate to veterinary_practice directory and enter command 'psql -d veterinary_practice -f db/vet_practice.sql' to run the database and create db tables. Populate the database with some data by entering the command 'ruby db/seeds.rb'. 
+Finally run the app: 'ruby app.rb'. This will generate a four digit port number , for example 'listening on port=4567'. Enter 'localhost:4567/' in your browser and you should be able to run the app.
+
 
 
 Brief information can be found here: (https://github.com/codeclan/e41_classnotes/blob/master/week_04/projects/briefs/Vet_Management.md)

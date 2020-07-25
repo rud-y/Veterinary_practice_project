@@ -1,5 +1,5 @@
 body{
-    
+    background-color: rgb(224, 224, 172);
 }
 #main-header{
     font-size: 28px;
@@ -39,24 +39,29 @@ body{
     clear: left;
     width: 200px;
     text-align: right;
+    padding-right: 3px;
 }
 input,select {
   display: inline-block;
   float:left;
 }
   #btn {
-      background-color: lightsteelblue;
+      background-color: rgb(24, 111, 226);
       font-weight: bold;
   }
   a{
       color: black;
   }
   a:hover{
-      background-color: lightseagreen;
+      background-color: rgb(201, 243, 241);
+      text-decoration: none;
   }
   .index-list-item{
     text-decoration: none;
 }
 #del{
     font-style: initial;
+}
+.form{
+  background-color: rgb(120, 208, 169);
 }

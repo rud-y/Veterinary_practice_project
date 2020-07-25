@@ -18,12 +18,13 @@ get '/customers/:id' do
 end
 
 post '/customers' do 
-    Customer.new(params).save
+    @customer = Customer.new(params)
+    @customer.save
     redirect to '/customers'
 end
 
 get '/customers/:id/edit' do #Edit-form
-    # @pets = Pet.find_all()
+    
     @customer = Customer.find(params['id'])
     erb(:"customers/edit")
 end
