@@ -40,21 +40,20 @@ body{
     width: 200px;
     text-align: right;
     padding-right: 3px;
-}
-input,select {
+  }
+  input,select {
   display: inline-block;
   float:left;
 }
   #btn {
-      background-color: rgb(24, 111, 226);
       font-weight: bold;
   }
   a{
       color: black;
+      text-decoration: none;
   }
   a:hover{
-      background-color: rgb(201, 243, 241);
-      text-decoration: none;
+      
   }
   .index-list-item{
     text-decoration: none;
