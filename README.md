@@ -14,8 +14,20 @@ For the app to be running the following must be installed:
 How to Run:
 
 First clone the project to the local machine.
-In your machine terminal create database veterinary_practice by typing 'create db veterinary_practice' . After that navigate to veterinary_practice directory and enter command 'psql -d veterinary_practice -f db/vet_practice.sql' to run the database and create db tables. Populate the database with some data by entering the command 'ruby db/seeds.rb'. 
-Finally run the app: 'ruby app.rb'. This will generate a four digit port number , for example 'listening on port=4567'. Enter 'localhost:4567/' in your browser and you should be able to run the app.
+In your machine terminal create database veterinary_practice by typing:
+'create db veterinary_practice'
+
+After that navigate to veterinary_practice directory and enter the following command to run the database and create db tables:
+'psql -d veterinary_practice -f db/vet_practice.sql'
+
+Populate the database with some data by running:
+'ruby db/seeds.rb'
+
+Finally run the app: 'ruby app.rb' 
+This will generate a four digit port number, for example:
+'listening on port=4567'.
+
+Enter 'localhost:4567/' in your browser and you should be able to run the app.
 
 
 

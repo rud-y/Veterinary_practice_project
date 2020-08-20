@@ -4,10 +4,10 @@ require_relative('../models/vet')
 also_reload('../models/*')
 
 
+
 get '/vets' do 
     @vets = Vet.find_all()
     erb(:"vets/index")
-    ##@title = "Welcome to Edinburgh Broughton Family Vet Practice/shop"
 end
 
 get '/vets/new' do 
@@ -21,7 +21,7 @@ get '/vets/:id' do
 end
 
 
-post '/vets' do 
+post '/vets' do #Create
     Vet.new(params).save
     redirect to '/vets'
 end
