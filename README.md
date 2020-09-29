@@ -1,4 +1,4 @@
-# Veterinary Pracice project 
+# Veterinary Practice project 
 
 The Edivet Veterinary Practice  is a vet practice app that is designed to be used by a receptionist employee at the vet practice. 
 
