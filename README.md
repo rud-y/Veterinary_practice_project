@@ -1,6 +1,6 @@
-# Veterinary Practice project 
+# Vet Management App 
 
-The Edivet Veterinary Practice  is a vet practice app that is designed to be used by a receptionist employee at the vet practice. 
+A web app designed for a veterinary practice business, and is able to perform basic CRUD operations to keep track of customers, registrations, pets, treatments as well as employees of the practice. 
 
 
 For the app to be running the following must be installed:
