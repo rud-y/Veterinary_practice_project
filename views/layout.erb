@@ -4,30 +4,23 @@
     <meta charset="utf-8">
     <title>Vet Practice Edivet</title>
     <link href="/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap">
   </head>
   <body>
   <h2 id="main-header">Edivet</h2>
+  <a href="/home"><img src="/dog_paw.jpg" width="400" alt="vet practice logo"/></a>
 
-  <div id="main-container">
-    <div class="nav">
+  <div id="side-bar">
       <ul>
-        <li class="m-item">
-          <a href="/vets">Vets</a>
-        </li>
-      
-        <li class="m-item">
-          <a href="/pets">Pets</a>
-        </li>
-      
-        <li class="m-item">
-            <a href="/customers">Customers</a>
-        </li>
+        <li class="m-item"><a href="/vets">Vets</a></li>
+        <li class="m-item"><a href="/pets">Pets</a></li>
+        <li class="m-item"><a href="/customers">Customers</a></li>
       </ul>
-    </div>
   </div>
 
+  <div id="main-container">
     <%= yield %>
+    </div>
     
   </body>
 </html>

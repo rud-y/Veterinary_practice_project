@@ -3,10 +3,10 @@
 <div class="form">
 <form method="post" action="/pets">
 <label for="name-field">Name</label>
-<input type="text" id="name-field" name="name">
+<input type="text" id="name-field" name="name" required>
 
 <label for="type-field">Type:</label>
-<input type="text" id="type-field" name="type">
+<input type="text" id="type-field" name="type" required>
 
 <label for="born-field">Born:</label>
 <input type="text" id="born-field" name="date_of_birth">
@@ -15,14 +15,14 @@
 <input type="text" id="notes-field" name="treatment_notes">
 
 <label for="vet-select">Choose from vets:</label>
-<select id="vet-select" name="vet_id">
+<select id="vet-select" name="vet_id" value="Please select">
     <% @vets.each do |vet| %>
         <option value=<%= vet.id %>> <%= vet.first_name %> <%= vet.last_name %> </option>
     <% end %>
 </select>
 
 <label for="customer-select">Owner:</label>
-<select id="customer-select" name="customer_id">
+<select id="customer-select" name="customer_id"  required >
     <% @customers.each do |customer| %>
         <option value=<%= customer.id %>> <%= customer.first_name %> <%= customer.last_name %> </option>
     <% end %>

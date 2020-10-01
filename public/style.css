@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(212, 212, 182);
+    background-color: yellowgreen;
     font-family: 'Fredoka One', cursive;
 }
 
@@ -8,15 +8,12 @@ body{
     text-align: center;
 }
 
-#welcome{
-  text-align: center;
-}
 #nav {
-    width: 400px;
+    /* width: 400px;
     display: flex;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
-    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto; */
 }
   
 .m-item {
@@ -71,3 +68,15 @@ input,select {
   color:red;
   background-color: white;
 }
+
+
+#home-page {
+  align-content: center;
+}
+
+/* #logo-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/images/dog_paw.jpg");
+  display: flex; 
+} */
