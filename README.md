@@ -28,7 +28,7 @@ Populate the database with some data by running:
 Finally run the app: 'ruby app.rb' 
 Enter the generated four digit port number ('listening on port=4567') into your browser:
 
->'localhost:4567/'
+>'localhost:4567/home'
 
  and you should be able to run the app.
 
