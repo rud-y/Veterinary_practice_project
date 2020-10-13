@@ -12,19 +12,19 @@ get '/customers/new' do
     erb(:"customers/new")
 end
 
+post '/customers' do 
+    @customer = Customer.new(params)
+    @customer.save
+    erb(:"customers/create")
+end
+
 get '/customers/:id' do 
     @customer = Customer.find(params['id'].to_i)
     erb(:"customers/show")
 end
 
-post '/customers' do 
-    @customer = Customer.new(params)
-    @customer.save
-    redirect to '/customers'
-end
-
-get '/customers/:id/edit' do #Edit-form
-    
+#Edit-form
+get '/customers/:id/edit' do 
     @customer = Customer.find(params['id'])
     erb(:"customers/edit")
 end

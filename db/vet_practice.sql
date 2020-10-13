@@ -7,7 +7,8 @@ CREATE TABLE vets(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
-    phone_number VARCHAR(255)
+    phone_number VARCHAR(255),
+    e_mail VARCHAR (255)
 );
 
 CREATE TABLE customers(
@@ -28,5 +29,3 @@ CREATE TABLE pets(
     vet_id INT REFERENCES vets(id) ON DELETE CASCADE,
     customer_id INT REFERENCES customers(id) ON DELETE CASCADE
 );
-
-

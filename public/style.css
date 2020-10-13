@@ -1,82 +1,191 @@
 body{
-    background-color: yellowgreen;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'IM Fell DW Pica', serif;
 }
 
-#main-header{
-    font-size: 25px;
-    text-align: center;
-}
-
-#nav {
-    /* width: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto; */
-}
+#content {
   
-.m-item {
-    display: inline-block;
-    padding-left: 60px;
-  }
-
-  .m-item > a:hover{
-    color:brown;
-  }
-
-.our{
-    display: flex;
-    align-items: center;
-  }
-.our-item{
-    display: block;
-    padding-left: 30px;
-    
-  }
-.index-list{
-    display: block;
-    background-color: lightgoldenrodyellow;
-    width: 300px;
-    text-align: center;
-  }
-
-label{
-    display: inline-block;
-    clear: left;
-    width: 200px;
-    text-align: right;
-    padding-right: 3px;
-  }
-
-input,select {
-  display: inline-block;
-  /* float:left; */
-}
-#btn {
-      font-weight: bold;
-  }
-  
-.index-list-item{
-    text-decoration: none;
-}
-#del{
-    font-style: initial;
 }
 
-#back a {
-  color:red;
-  background-color: white;
+h1, h2, h3, h4, h5{
+  font-family: 'Fredoka One', cursive;
+}
+h4 a {
+  text-decoration: none;
 }
 
-
-#home-page {
-  align-content: center;
+#welcome-header {
+  font-size: 45px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-/* #logo-img {
-  width: 100%;
-  height: 100%;
-  background-image: url("../public/images/dog_paw.jpg");
-  display: flex; 
+#top-head-container{
+  display: flexbox;
+  flex-flow: column wrap;
+  justify-content: center;
+  background-color:white;
+  padding-bottom: 0.2rem;
+  border-radius: 0.2rem;
+}
+.top-head-item{
+  display: flex;
+  justify-content: center;
+}
+
+#menu {
+  display: flex;
+  background-color: rgb(119, 134, 182);
+}
+
+#menu  li {
+  list-style: none;
+  margin-right: 1rem;
+}
+#menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+#menu li a:hover {
+  text-decoration: underline;
+}
+#logo-wrapper {
+  /* display: flex; */
+  justify-content: center;
+}
+
+#logo {
+  max-width:150px;
+  max-height: 120px;
+}
+
+.section-header{
+  display: flex;
+  justify-content: center;
+  }
+
+.actions {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-bottom:5px;
+}
+.actions li a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.actions li a:hover {
+  text-decoration: underline;
+}
+
+/* .section-line {
+  margin: 0 auto;
+  width: 250px;
+  border-bottom: solid white 2px;
 } */
+
+.a {
+  text-decoration: none;
+  color: rgb(25, 63, 87);
+}
+
+.a:hover {
+  color:black;
+  text-decoration: underline;
+  border-radius: 8px;
+}
+
+/* Table */
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+}
+
+#customer-table {
+  width: 100%;
+}
+#pet-table {
+  width: 100%;
+}
+#vet-table {
+  width: 100%;
+}
+
+table, th,td {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px, 10px, 20px, 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: 20px;
+}
+
+.details-anchor-left-border{
+  border-left: solid black 0.1rem;
+}
+
+.show-customer-pet-list {
+  list-style: none;
+  display: inline-block;
+}
+
+/* Show details */
+
+.show-details {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px 30px 30px 30px;
+}
+#details-table {
+  width: 70%;
+}
+
+/* Forms: New , Edit */
+input {
+  width:120px;
+  float: left;
+}
+select {
+  height:20px;
+  width:120px;
+  float: left;
+}
+label{
+  float: left;
+  clear: left;
+  width: 160px;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.new-form {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.edit-form {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* .input-row {
+  margin-bottom: 10px;
+} */
+
+.form-el {
+  background-color: brown;
+  margin-bottom: 10px;
+}

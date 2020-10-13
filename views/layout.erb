@@ -3,24 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Vet Practice Edivet</title>
-    <link href="/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
   </head>
+
   <body>
-  <h2 id="main-header">Edivet</h2>
-  <a href="/home"><img src="/dog_paw.jpg" width="400" alt="vet practice logo"/></a>
-
-  <div id="side-bar">
-      <ul>
-        <li class="m-item"><a href="/vets">Vets</a></li>
-        <li class="m-item"><a href="/pets">Pets</a></li>
-        <li class="m-item"><a href="/customers">Customers</a></li>
-      </ul>
-  </div>
-
-  <div id="main-container">
-    <%= yield %>
-    </div>
+  <div id="content">
+    <div id="top-head-container">
+      <h2 class="top-head-item" id="header">Feathers 'n' Tails</h2>
     
+
+      <div class="top-head-item" id="logo-wrapper">
+        <a href="/home"><img width="110" height="90" id="logo" src="/images/dog_paws..jpg"/></a>
+       </div>
+
+    
+      <div class="top-head-item" id="menu">
+        <li><a href="/vets">Vets</a></li>
+        <li><a href="/pets">Pets</a></li>
+        <li><a href="/customers">Customers</a></li>
+      </div>
+    </div>
+    <br>
+    
+    <%=yield%>
+  </div>
   </body>
+
 </html>

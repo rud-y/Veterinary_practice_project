@@ -1,16 +1,19 @@
-<h3>Edit contact details for <%= @vet.first_name %> <%= @vet.last_name %>:</h3>
+<h3>Edit details for <%= @vet.first_name %> <%= @vet.last_name %>:</h3>
 
+<div class="edit-form">
+    <form id="form" method="post" action="/vets/<%= @vet.id %>">
+        <label for="first_name">First name:</label>
+        <input type="text" id="first-name" name="first_name" value="<%= @vet.first_name %>">
 
-<form id="form" method="post" action="/vets/<%= @vet.id %>">
-<label for="f-name-field">First name</label>
-<input type="text" id="f-name-field" name="first_name" value="<%= @vet.first_name %>">
+        <label for="last_name">Last name:</label>
+        <input type="text" id="last-name" name="last_name" value="<%= @vet.last_name %>">
 
-<label for="l-name-field">Last name</label>
-<input type="text" id="l-name-field" name="last_name" value="<%= @vet.last_name %>">
+        <label for="phone_number">Phone number:</label>
+        <input type="text" id="phone_number" name="phone_number" value="<%= @vet.phone_number %>">
 
-<label for="phon-field">Phone number</label>
-<input type="text" id="phon-field" name="phone_number" value="<%= @vet.phone_number %>">
+        <label for="email">E-mail</label>
+        <input type="text" id="e_mail" name="e_mail" value="<%= @vet.e_mail %>">
 
-
-<input id="btn" type="submit" value="Submit changes">
-</form>
+        <input id="btn" type="submit" value="Submit changes">
+    </form>
+</div>

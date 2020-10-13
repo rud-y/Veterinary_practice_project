@@ -11,6 +11,7 @@ class Customer
         @last_name = options['last_name']
         @phone_number = options['phone_number']
         @e_mail = options['e_mail']
+        
         @registered = options['registered']
     end
 
@@ -65,7 +66,9 @@ class Customer
         return pets
     end
 
-    def register()
-        
+    def pet_count()
+        return pets().count
     end
+
+   
 end

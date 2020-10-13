@@ -6,6 +6,4 @@ require_relative('controllers/customers_controller')
 
 get '/home' do
   erb(:"home")
-  # @vets = Vet.find_all()
-  # erb(:"vets/index")
 end

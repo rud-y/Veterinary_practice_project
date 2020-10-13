@@ -3,22 +3,22 @@ require_relative('../db/sql_runner')
 class Pet 
 
     attr_reader :id
-    attr_accessor :name, :type, :date_of_birth, :treatment_notes, :vet_id, :customer_id
+    attr_accessor :name, :type, :date_of_birth, :vet_id, :customer_id, :treatment_notes
 
     def initialize (options)
         @id = options['id'].to_i if options['id']
         @name = options['name']
         @type = options['type']
         @date_of_birth = options['date_of_birth']
-        @treatment_notes = options['treatment_notes']
-        @vet_id = options['vet_id'].to_i
         @customer_id = options['customer_id'].to_i
+        @vet_id = options['vet_id'].to_i
+        @treatment_notes = options['treatment_notes']
     end
 
     def save()
-        sql = "INSERT INTO pets (name, type, date_of_birth, treatment_notes, vet_id, customer_id)
+        sql = "INSERT INTO pets (name, type, date_of_birth, customer_id, vet_id, treatment_notes)
         VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
-        values = [@name, @type, @date_of_birth, @treatment_notes, @vet_id, @customer_id]
+        values = [@name, @type, @date_of_birth, @customer_id, @vet_id, @treatment_notes]
         result = SqlRunner.run(sql, values).first
         @id = result['id'].to_i
     end

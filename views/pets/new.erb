@@ -1,34 +1,45 @@
-<h2>Add new pet</h2>
+<h2 class="section-header">Add new pet</h2>
+<h4 class="section-header">Or register a new customer&nbsp;<a href="/customers/new">here</a></h4>
+<hr>
 
-<div class="form">
+<div class="new-form">
 <form method="post" action="/pets">
-<label for="name-field">Name</label>
-<input type="text" id="name-field" name="name" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-<label for="type-field">Type:</label>
-<input type="text" id="type-field" name="type" required>
+    <label for="type">Type:</label>
+    <input type="text" id="type" name="type" required>
 
-<label for="born-field">Born:</label>
-<input type="text" id="born-field" name="date_of_birth">
+    <label for="date_of_birth">DOB:</label>
+    <input type="text" id="dob" name="date_of_birth" required>
 
-<label for="notes-field">Treatment notes:</label>
-<input type="text" id="notes-field" name="treatment_notes">
+    <label for="customer-select">Owner:</label>
+    <select id="customer-select" name="customer-select" required>
+        <option selected disabled>Select Owner</option>
+            <% for customer in @customers %>
+                <option value="<%= customer.id %>"> <%= customer.first_name %> <%= customer.last_name %></option>
+            <% end %>
+    </select>
 
-<label for="vet-select">Choose from vets:</label>
-<select id="vet-select" name="vet_id" value="Please select">
-    <% @vets.each do |vet| %>
-        <option value=<%= vet.id %>> <%= vet.first_name %> <%= vet.last_name %> </option>
-    <% end %>
-</select>
+    <div class="input-row">
+        <label for="vet-select">Vet:</label>
+        <select id="vet-select" name="vet-select" required>
+            <option selected disabled>Select Vet</option>
+                <% @vets.each do |vet| %>
+            <option value="<%= vet.id+1 %>"> <%= vet.first_name %> <%= vet.last_name %></option>
+                <% end %>
+        </select>
+    </div>
+    <br>
 
-<label for="customer-select">Owner:</label>
-<select id="customer-select" name="customer_id"  required >
-    <% @customers.each do |customer| %>
-        <option value=<%= customer.id %>> <%= customer.first_name %> <%= customer.last_name %> </option>
-    <% end %>
-</select></br>
+    <div class="input-row">
+        <label for="treatment_notes">Treatment notes:</label>
+        <textarea cols="13" rows="2"id="treatment-notes" name="treatment_notes"></textarea>
+    </div>
+    <br>
 
-
-<input id="btn" type="submit" value="Add Pet">
+    <div class="input-row">
+        <input id="submit-btn" type="submit" value="Add">
+    </div>
 </form>
 </div>

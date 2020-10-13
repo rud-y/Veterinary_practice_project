@@ -1,16 +1,41 @@
-<div class="single-item">
-<h3><%= @pet.name %> </h3>
-<p>Type: <%= @pet.type%> </p>
-<p>Born: <%= @pet.date_of_birth %> </p>
-<p>Treatment notes: <%= @pet.treatment_notes %> </p>
-<p>Owner:<a href="/customers/<%= @pet.customer_id %>"> <%= @pet.customer.first_name %> <%= @pet.customer.last_name %></a> </p>
-<p>Vet assigned to: <%= @pet.vet.first_name %> <%= @pet.vet.last_name %> </p>
-</div>
+<h2 class="section-header">Details for: <%= @pet.name%></h2>
+
+<div class="show-details">
+    <table id="details-table">
+        <tr>
+            <td>Name:</td>
+            <td><strong><%= @pet.name %></strong></td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td><%= @pet.type %></td>
+        </tr>
+        <tr>
+            <td>DOB:</td>
+            <td><%= @pet.date_of_birth %></td>
+        </tr>
+        <tr>
+            <td>Owner:</td>
+            <td><a href="/customers/<%= @pet.customer_id %>"> <%= @pet.customer.first_name %> <%= @pet.customer.last_name %></a></td>
+        </tr>
+        <tr>
+            <td>Vet assigned:</td>
+            <td><a href="/vets/<%= @pet.vet_id %>"> <%= @pet.vet.first_name %> <%= @pet.vet.last_name %></a></td>
+        </tr>
+        <tr>
+            <td>Treatment Notes:</td>
+            <td><%= @pet.treatment_notes %></td>
+    </table>
 
 
-<button><a href="/pets/<%= @pet.id %>/edit">Edit</a></button>
+</div>  
+
+
+
+
+<button class="buttons"><a href="/pets/<%= @pet.id %>/edit">Edit</a></button>
 <form method="post" action="/pets/<%= @pet.id %>/delete">
-<input id="del" type="submit" value="Delete Pet">
+    <input class="buttons" id="del" type="submit" value="Delete">
 </form><br>
 
-<p id="back"><a href="/pets">Back to pets</a></p>
+<button class="buttons"><a href="/pets">Back to pets</a></button>

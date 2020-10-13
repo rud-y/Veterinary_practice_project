@@ -1,15 +1,30 @@
-<div class="single-item">
-<h3><%= @vet.first_name %> <%= @vet.last_name %> </h3>
-<p>Contact: <%= @vet.phone_number %></p>
-<p>Assigned pets:</p>
-<% @pets.each do |pet| %>
-<p><%= pet.name if pet.vet_id == @vet.id %> </p>
-<% end %>
+<h2 class="section-header">Details for: <%= @vet.first_name%> <%= @vet.last_name%></h2>
+
+
+
+<div class="show-details">
+    <table id="details-table">
+        <tr>
+            <td>Name:</td>
+            <td><b><%= @vet.first_name %> <%= @vet.last_name %></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><%= @vet.phone_number %></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>
+                <%= @vet.e_mail %>
+            </td>
+        </tr>
+    </table>
+</div>  
 
 
 <p><a href="/vets/<%= @vet.id %>/edit">Edit details</a></p>
 <form method="post" action="/vets/<%= @vet.id %>/delete">
-<input id="del" type="submit" value="Delete Vet">
+    <input id="del" type="submit" value="Delete Vet">
 </form><br>
 
 <p id="back"><a href="/vets">Back to vets</a></p>

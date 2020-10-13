@@ -1,13 +1,30 @@
-<div class="our">
-<h2 class="our-item">Our Customers</h2>
-<div class="our-item"><p><a href="/customers/new">Add new</p></div>
-</div>
 
-
-<div class="index-list">
-<div class="index-list-item">
-<% @customers.each do |customer| %>
-<h3><a href="/customers/<%= customer.id %>"><%= customer.first_name %> <%= customer.last_name %></a></h3>
-<% end %>
-</div>
+<h2 class="section-header">Our customers</h2>
+    <div class="actions">
+        <li><a class="a" href="/customers/new">Add new customer</a></li>
+    </div>
+    
+    <div class="section-line"></div>
+    
+<div class="table-wrapper">
+    <table id"customers-table">
+        <tr>
+            <th>Name</th>
+            <th>Number of Pets</th>
+        </tr>
+            <% for customer in @customers %>
+            <tr> 
+                <td>
+                    <%= customer.first_name %> <%=customer.last_name %>
+                </td>
+                <td>
+                    <%= customer.pet_count %>
+                </td>
+                
+                <td class="details-anchor-left-border">
+                    <a class="a" href="/customers/<%= customer.id %>">Details</a>
+                </td>
+            </tr>
+            <% end %>
+    </table>
 </div>

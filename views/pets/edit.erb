@@ -1,6 +1,6 @@
 <h3>Edit information for <%= @pet.name %></h3>
 
-
+<div class="edit-form">
 <form id="form" method="post" action="/pets/<%= @pet.id %>">
 <label for="treatment-notes">Treatment Notes</label>
 <input type="text" id="treatment-notes" name="treatment_notes" value="<%= @pet.treatment_notes %>">
@@ -16,3 +16,4 @@
 <br>
 <input id="btn" type="submit" value="Submit changes">
 </form>
+</div>

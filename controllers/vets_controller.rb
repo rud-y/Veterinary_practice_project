@@ -9,7 +9,7 @@ get '/vets' do
     @vets = Vet.find_all()
     erb(:"vets/index")
 end
-
+#New/form
 get '/vets/new' do 
     erb(:"vets/new")
 end
@@ -20,21 +20,24 @@ get '/vets/:id' do
     erb(:"vets/show")
 end
 
-
-post '/vets' do #Create
+#Create
+post '/vets' do 
     Vet.new(params).save
     redirect to '/vets'
 end
 
-get '/vets/:id/edit' do #Edit
+
+#Edit/form
+get '/vets/:id/edit' do 
     @vet = Vet.find(params['id'].to_i)
     erb(:"vets/edit")
 end
 
-post '/vets/:id' do #Update
+post '/vets/:id' do
     @vet = Vet.find(params['id'])
     @vet.last_name = params['last_name']
     @vet.phone_number = params['phone_number']
+    @vet.e_mail = params['e_mail']
     @vet.update
     redirect to "vets/#{params['id']}"
 end
