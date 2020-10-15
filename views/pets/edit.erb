@@ -1,19 +1,19 @@
-<h3>Edit information for <%= @pet.name %></h3>
+<h3>Update information for <%= @pet.name %></h3>
 
 <div class="edit-form">
-<form id="form" method="post" action="/pets/<%= @pet.id %>">
-<label for="treatment-notes">Treatment Notes</label>
-<input type="text" id="treatment-notes" name="treatment_notes" value="<%= @pet.treatment_notes %>">
+    <form id="form" method="post" action="/pets/<%= @pet.id %>">
+        <label for="treatment_notes">Treatment Notes</label>
+        <textarea rows="8" cols="20" id="treatment-notes" name="treatment_notes"> <%= @pet.treatment_notes %> </textarea>
 
 
-<label for="vet-select">Change vet:</label>
-<select id="vet-select" name="vet_id">
-    <% @vets.each do |vet| %>
-        <option <%= "selected" if vet.id == @pet.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
-    <% end %>
-</select>
+        <label for="vet_id">Change vet:</label>
+        <select id="vet-select" name="vet_id">
+            <% @vets.each do |vet| %>
+                <option <%= "selected" if vet.id == @pet.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
+            <% end %>
+        </select>
 
-<br>
-<input id="btn" type="submit" value="Submit changes">
-</form>
+        <br>
+    <input class="btns" type="submit" value="Submit changes">
+    </form>
 </div>

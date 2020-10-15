@@ -29,7 +29,8 @@ get '/customers/:id/edit' do
     erb(:"customers/edit")
 end
 
-post '/customers/:id' do #Update
+#Update
+post '/customers/:id' do 
     @customer = Customer.find(params['id']) #Customer.find(id)
     @customer.last_name = params['last_name']
     @customer.phone_number = params['phone_number']

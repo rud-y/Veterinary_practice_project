@@ -22,10 +22,10 @@
 </div>  
 
 
-<p><a href="/vets/<%= @vet.id %>/edit">Edit details</a></p>
+<button class="btns"><a href="/vets/<%= @vet.id %>/edit">Edit details</a></button>
 <form method="post" action="/vets/<%= @vet.id %>/delete">
-    <input id="del" type="submit" value="Delete Vet">
+    <input class="btns" type="submit" value="Delete Vet">
 </form><br>
 
-<p id="back"><a href="/vets">Back to vets</a></p>
+<button class="btns"><a href="/vets">Back to vets</a></p>
 </div>

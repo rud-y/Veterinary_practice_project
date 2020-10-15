@@ -67,4 +67,12 @@ class Vet
         return pets().count
     end
 
+    def appointments()
+        sql = "SELECT * FROM appointments WHERE vet_id = $1;"
+        values = [@id]
+        result = SqlRunner.run(sql,values)
+        appointments = result.map{ |appointment| Appointment.new(appointment)}
+        return appointments
+    end
+
 end

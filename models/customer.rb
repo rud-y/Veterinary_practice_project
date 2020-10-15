@@ -11,7 +11,6 @@ class Customer
         @last_name = options['last_name']
         @phone_number = options['phone_number']
         @e_mail = options['e_mail']
-        
         @registered = options['registered']
     end
 

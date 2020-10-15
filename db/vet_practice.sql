@@ -1,7 +1,8 @@
-
+DROP TABLE IF EXISTS appointments;
 DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS customers;
+
 
 CREATE TABLE vets(
     id SERIAL PRIMARY KEY,
@@ -28,4 +29,12 @@ CREATE TABLE pets(
     treatment_notes VARCHAR(255),
     vet_id INT REFERENCES vets(id) ON DELETE CASCADE,
     customer_id INT REFERENCES customers(id) ON DELETE CASCADE
+);
+
+CREATE TABLE appointments (
+    id SERIAL PRIMARY KEY,
+    date DATE,
+    time TIME,
+    pet_id INT REFERENCES pets(id) ON DELETE CASCADE,
+    vet_id INT REFERENCES vets(id) ON DELETE CASCADE
 );

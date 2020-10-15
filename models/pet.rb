@@ -31,7 +31,7 @@ class Pet
     end
 
     def Pet.find_all()
-        sql = "SELECT * from pets name"
+        sql = "SELECT * from pets"
         all_pets = SqlRunner.run(sql)
         result = all_pets.map {|pet| Pet.new(pet)}
         return result

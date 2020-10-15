@@ -20,7 +20,6 @@ get '/pets/:id' do
     erb(:"pets/show")
 end
 
-
 post '/pets' do 
     @pet = Pet.new(params)
     @pet.save

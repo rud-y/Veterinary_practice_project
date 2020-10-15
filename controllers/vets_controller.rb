@@ -9,6 +9,7 @@ get '/vets' do
     @vets = Vet.find_all()
     erb(:"vets/index")
 end
+
 #New/form
 get '/vets/new' do 
     erb(:"vets/new")

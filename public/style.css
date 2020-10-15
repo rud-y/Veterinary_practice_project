@@ -3,7 +3,8 @@ body{
 }
 
 #content {
-  
+  border: solid 1px black;
+  background-color: rgb(218, 197, 171);
 }
 
 h1, h2, h3, h4, h5{
@@ -16,7 +17,6 @@ h4 a {
 #welcome-header {
   font-size: 45px;
   text-align: center;
-  vertical-align: middle;
 }
 
 #top-head-container{
@@ -34,7 +34,6 @@ h4 a {
 
 #menu {
   display: flex;
-  background-color: rgb(119, 134, 182);
 }
 
 #menu  li {
@@ -56,9 +55,13 @@ h4 a {
 
 #logo {
   max-width:150px;
-  max-height: 120px;
+  max-height: 110px;
 }
 
+.section-header-new-pet {
+  display: flex;
+  justify-content: center;
+}
 .section-header{
   display: flex;
   justify-content: center;
@@ -69,6 +72,7 @@ h4 a {
   display: flex;
   justify-content: center;
   padding-bottom:5px;
+  border-bottom: white solid 2px;
 }
 .actions li a {
   margin-right: 1rem;
@@ -81,13 +85,19 @@ h4 a {
 
 /* .section-line {
   margin: 0 auto;
-  width: 250px;
-  border-bottom: solid white 2px;
+  width: 150px;
+  border-top: solid white 2px;
 } */
 
 .a {
   text-decoration: none;
-  color: rgb(25, 63, 87);
+  color: darkcyan;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: darkcyan;
 }
 
 .a:hover {
@@ -102,12 +112,13 @@ h4 a {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 600px;
-  padding: 10px;
+  /* max-width: 600px; */
+  padding: 20px;
 }
 
 #customer-table {
   width: 100%;
+  border-spacing: 0 15px;
 }
 #pet-table {
   width: 100%;
@@ -115,28 +126,33 @@ h4 a {
 #vet-table {
   width: 100%;
 }
+#appointment-table {
+  width: 100%;
+}
 
-table, th,td {
+table{
   border-collapse: collapse;
 }
 
-th, td {
-  padding: 10px, 10px, 20px, 20px;
+td, th {
+  padding: 30px, 30px, 30px, 30px;
+  width: 180px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
   font-size: 20px;
+  background-color: rgb(214, 193, 162);
 }
 
 .details-anchor-left-border{
   border-left: solid black 0.1rem;
+  margin-left: 3px;
 }
 
 .show-customer-pet-list {
   list-style: none;
-  display: inline-block;
 }
 
 /* Show details */
@@ -149,25 +165,36 @@ th {
   padding: 20px 30px 30px 30px;
 }
 #details-table {
-  width: 70%;
+  width: 100%;
 }
 
 /* Forms: New , Edit */
-input {
-  width:120px;
+
+label{
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+  margin-right: 1.5em;
+  margin-bottom: 2em;
+}
+
+/* input {
+  width:200px;
   float: left;
 }
 select {
   height:20px;
   width:120px;
   float: left;
-}
-label{
+} */
+
+input, select, textarea {
+  width: 180px;
   float: left;
-  clear: left;
-  width: 160px;
-  text-align: right;
-  margin-right: 1em;
+  height: 25px;
+  background-color: lightgrey;
+  margin-bottom: 1em;
 }
 
 .new-form {
@@ -181,11 +208,15 @@ label{
   margin: 0 auto;
 }
 
-/* .input-row {
-  margin-bottom: 10px;
-} */
-
-.form-el {
-  background-color: brown;
-  margin-bottom: 10px;
+.btns-wrapper {
+  margin: 0 auto;
+  display: flexbox;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  float: right;
 }
