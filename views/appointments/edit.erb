@@ -1,13 +1,13 @@
-<h3>Edit information appointment number <%= @appointment.id %></h3>
+<h3>Edit information for appointment number <%= @appointment.id %></h3>
 
 <div class="edit-form">
     <form id="form" method="post" action="/appointments/<%= @appointment.id %>">
         
         <label for="date">Date:</label>
-        <input type="date" name="date" required>
+        <input type="date" name="date" value="<% @appointment.date %> required>
             
         <label for="time">Time:</label>
-        <input type="time" name="time" required>
+        <input type="time" name="time" value="<% @appointment.time %> required>
 
         <label for="pet_id">Change pet:</label>
         <select id="pet-select" name="pet_id">

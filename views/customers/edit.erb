@@ -1,11 +1,11 @@
 <h3>Edit contact details for <%= @customer.first_name %> <%= @customer.last_name %>:</h3>
 
 <div class="edit-form">
-<form id="form" method="post" action="/customers/<%= @customer.id %>">
-    <label for="first-name">First name</label>
+    <form id="form" method="post" action="/customers/<%= @customer.id %>">
+    <label for="first_name">First name</label>
     <input type="text" id="first-name" name="first_name" value="<%= @customer.first_name %>">
 
-    <label for="last-name">Last name</label>
+    <label for="last_name">Last name</label>
     <input type="text" id="last-name" name="last_name" value="<%= @customer.last_name %>">
 
     <label for="phone-number">Phone number</label>
@@ -15,5 +15,5 @@
     <input type="text" id="email" name="e_mail" value="<%= @customer.e_mail %>">
 
     <input class="btns" type="submit" value="Submit changes">
-</form>
+    </form>
 </div>

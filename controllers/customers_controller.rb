@@ -31,7 +31,7 @@ end
 
 #Update
 post '/customers/:id' do 
-    @customer = Customer.find(params['id']) #Customer.find(id)
+    @customer = Customer.find(params['id']) 
     @customer.last_name = params['last_name']
     @customer.phone_number = params['phone_number']
     @customer.e_mail = params['e_mail']

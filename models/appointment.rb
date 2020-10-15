@@ -44,7 +44,7 @@ class Appointment
     end
 
     def self.find_all
-        sql = "SELECT * FROM appointments"
+        sql = "SELECT * FROM appointments ORDER BY date ASC"
         appointments = SqlRunner.run(sql)
         result = appointments.map{|appointment| Appointment.new(appointment)}
         return result
@@ -54,7 +54,8 @@ class Appointment
         sql = "SELECT * FROM appointments WHERE id = $1"
         values = [@id]
         appointment = SqlRunner.run(sql, values).first
-        return Appointment.new(appointment)
+        result = Appointment.new(appointment)
+        return result
     end
 
     def delete()

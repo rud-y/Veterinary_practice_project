@@ -1,7 +1,9 @@
+<h2 class="section-header">Customers</h2>
 <h3 class="section-header">Details for: <%= @customer.first_name%> <%= @customer.last_name%></h3>
     
 <div class="section-line"></div>
 
+<div class="show-details-wrapper">
 <div class="show-details">
     <table id="details-table">
         <tr>
@@ -22,7 +24,7 @@
                 <% for pet in @pets %>
             <td class="show-customer-pet-list">
                 
-                <li><%= pet.name %></li>
+                <li><%= pet.type %>: <%= pet.name %></li>
                 
             </td>
                 <% end %>
@@ -31,10 +33,12 @@
 </div>  
 
 <div class="btns-wrapper">
-<button class="btns"><a href="/customers/<%= @customer.id %>/edit">Edit details</a></button>
+    <a href="/customers/<%= @customer.id %>/edit"><button class="btns">Edit details</button></a>
+    
     <form method="post" action="/customers/<%= @customer.id %>/delete">
         <input class="btns" type="submit" value="Delete customer">
-    </form><br>
+    </form>
 
-<button class="btns"><a href="/customers"> Back to customers</a></button>
+    <a href="/customers"><button class="btns">Back to customers</button></a>
+</div>
 </div>

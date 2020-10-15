@@ -38,6 +38,17 @@ get '/appointments/:id/edit' do
     erb(:"appointments/edit")
 end
 
+#UPDATE
+post '/appointments/:id' do
+    @appointment = Appointment.find(params['id'])
+    @appointment.date = params['date']
+    @appointment.time = params['time']
+    @appointment.pet_id = params['pet_id']
+    @appointment.vet_id = params['vet_id']
+    @appointment.update
+    redirect to '/appointments'
+end
+
 
 
 # DELETE

@@ -1,3 +1,4 @@
+<h2 class="section-header">Pets</h2>
 <h2 class="section-header">Details for: <%= @pet.name%></h2>
 
 <div class="show-details">
@@ -32,10 +33,12 @@
 
 
 
+<div class="btns-wrapper">
+    <a href="/pets/<%= @pet.id %>/edit"><button class="btns">Edit details</button></a>
 
-<button class="btns"><a href="/pets/<%= @pet.id %>/edit">Edit</a></button>
     <form method="post" action="/pets/<%= @pet.id %>/delete">
         <input class="btns" id="del" type="submit" value="Delete">
     </form><br>
 
-<button class="btns"><a href="/pets">Back to pets</a></button>
+    <a href="/pets"><button class="btns">Back to pets</button></a>
+</div>

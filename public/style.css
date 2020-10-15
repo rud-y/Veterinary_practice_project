@@ -5,6 +5,7 @@ body{
 #content {
   border: solid 1px black;
   background-color: rgb(218, 197, 171);
+  position: relative;
 }
 
 h1, h2, h3, h4, h5{
@@ -72,7 +73,7 @@ h4 a {
   display: flex;
   justify-content: center;
   padding-bottom:5px;
-  border-bottom: white solid 2px;
+  border-bottom: white solid 1px;
 }
 .actions li a {
   margin-right: 1rem;
@@ -91,8 +92,8 @@ h4 a {
 
 .a {
   text-decoration: none;
-  color: darkcyan;
-  font-size: 18px;
+  color: black;
+  
 }
 
 a {
@@ -135,7 +136,7 @@ table{
 }
 
 td, th {
-  padding: 30px, 30px, 30px, 30px;
+  padding: 20px, 20px, 20px, 20px;
   width: 180px;
   text-align: left;
   vertical-align: top;
@@ -153,20 +154,47 @@ th {
 
 .show-customer-pet-list {
   list-style: none;
+  display: list-item;
 }
 
 /* Show details */
 
+#details-table {
+  width: 90%;
+}
+
+.show-details-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+}
 .show-details {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 550px;
   padding: 20px 30px 30px 30px;
 }
-#details-table {
-  width: 100%;
+.btns-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
+.btns {
+  display: inline;
+  height: 1.5rem;
+  width: 8rem;
+  background-color: white;
+  color: black;
+  margin-right: 1em;
+}
+.btns:hover {
+  background-color:rgb(128, 101, 66);
+  color: white;
+  font-weight: bold;
+}
+
 
 /* Forms: New , Edit */
 
@@ -179,21 +207,10 @@ label{
   margin-bottom: 2em;
 }
 
-/* input {
-  width:200px;
-  float: left;
-}
-select {
-  height:20px;
-  width:120px;
-  float: left;
-} */
-
 input, select, textarea {
-  width: 180px;
+  width: 120px;
   float: left;
   height: 25px;
-  background-color: lightgrey;
   margin-bottom: 1em;
 }
 
@@ -206,17 +223,4 @@ input, select, textarea {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-}
-
-.btns-wrapper {
-  margin: 0 auto;
-  display: flexbox;
-  flex-flow: row nowrap;
-  justify-content: center;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  float: right;
 }
