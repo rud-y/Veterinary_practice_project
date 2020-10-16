@@ -84,12 +84,6 @@ h4 a {
   text-decoration: underline;
 }
 
-/* .section-line {
-  margin: 0 auto;
-  width: 150px;
-  border-top: solid white 2px;
-} */
-
 .a {
   text-decoration: none;
   color: black;
@@ -196,14 +190,8 @@ tr:hover {
   margin-right: 1em;
 }
 .btns:hover {
-<<<<<<< HEAD
   background-color:rgb(218, 197, 171);
   border: white solid 2px;
-=======
-  background-color:rgb(197, 205, 206);
-  color: white;
-  font-weight: bold;
->>>>>>> master
 }
 
 
