@@ -196,8 +196,14 @@ tr:hover {
   margin-right: 1em;
 }
 .btns:hover {
+<<<<<<< HEAD
   background-color:rgb(218, 197, 171);
   border: white solid 2px;
+=======
+  background-color:rgb(197, 205, 206);
+  color: white;
+  font-weight: bold;
+>>>>>>> master
 }
 
 
