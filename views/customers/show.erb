@@ -1,7 +1,7 @@
 <h2 class="section-header">Customers</h2>
 <h3 class="section-header">Details for: <%= @customer.first_name%> <%= @customer.last_name%></h3>
     
-<div class="section-line"></div>
+
 
 <div class="show-details-wrapper">
 <div class="show-details">
@@ -24,7 +24,7 @@
                 <% for pet in @pets %>
             <td class="show-customer-pet-list">
                 
-                <li><%= pet.type %>: <%= pet.name %></li>
+                <li><%= pet.name %> - <%= pet.type %> </li>
                 
             </td>
                 <% end %>

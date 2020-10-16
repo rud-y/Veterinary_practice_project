@@ -5,7 +5,7 @@ class Appointment
     attr_reader :id
     attr_accessor :date, :time, :pet_id, :vet_id
 
-    def initialize(options)
+    def initialize (options)
         @id = options['id'].to_i if options['id']
         @date = options['date']
         @time = options['time']
@@ -33,7 +33,7 @@ class Appointment
 
 
     def update() 
-        sql = "UPDATE apointments SET (
+        sql = "UPDATE appointments SET (
             date,
             time,
             pet_id,
@@ -52,7 +52,7 @@ class Appointment
 
     def self.find(id)
         sql = "SELECT * FROM appointments WHERE id = $1"
-        values = [@id]
+        values = [id]
         appointment = SqlRunner.run(sql, values).first
         result = Appointment.new(appointment)
         return result
