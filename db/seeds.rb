@@ -2,7 +2,7 @@ require_relative('../models/appointment')
 require_relative('../models/vet')
 require_relative('../models/pet')
 require_relative('../models/customer')
-require('pry-byebug')
+
 require('date')
 
 
@@ -65,5 +65,3 @@ appointment2.save()
 
 
 
-binding.pry 
-nil
