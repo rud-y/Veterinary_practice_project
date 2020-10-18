@@ -1,0 +1,30 @@
+<h3 class="section-header">Edit information for <%= @appointment.pet.name %> 's appointment with <%= @appointment.vet.first_name %> <%= @appointment.vet.last_name %></h3>
+    
+<div class="edit-form">
+    <form id="form" method="post" action="/appointments/<%= @appointment.id %>">
+        
+        <label for="date">Date:</label>
+        <input type="date" name="date"  value="<% @appointment.date_string %>" required>
+            
+        <label for="time">Time:</label>
+        <input type="time" name="time" value="<% @appointment.time %>" required>
+
+        <label for="pet_id">Change pet:</label>
+        <select id="pet-select" name="pet_id">
+            <% @pets.each do |pet| %>
+                <option <%= "selected" if pet.id == @appointment.pet_id %> value="<%= pet.id %>"> <%= pet.name %> </option>
+            <% end %>
+        </select>
+
+
+        <label for="vet_id">Change vet:</label>
+        <select id="vet-select" name="vet_id">
+            <% @vets.each do |vet| %>
+                <option <%= "selected" if vet.id == @appointment.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
+            <% end %>
+        </select>
+        <br>
+        
+        <input class="btns" type="submit" value="Update">
+    </form>
+</div>

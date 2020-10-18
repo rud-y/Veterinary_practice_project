@@ -1,0 +1,21 @@
+<h3 class="section-header">Edit contact details for <%= @customer.first_name %> <%= @customer.last_name %>:</h3>
+
+<div class="edit-form">
+    <form id="form" method="post" action="/customers/<%= @customer.id %>">
+
+    <label for="first_name">First name</label>
+    <input type="text" id="first-name" name="first_name" value="<%= @customer.first_name %>">
+    
+    <label for="last_name">Last name</label>
+    <input type="text" id="last-name" name="last_name" value="<%= @customer.last_name %>">
+
+    <label for="phone_number">Phone number</label>
+    <input type="text" id="phone" name="phone_number" value="<%= @customer.phone_number %>">
+
+    <label for="e_mail">E-mail</label>
+    <input type="text" id="email" name="e_mail" value="<%= @customer.e_mail %>">
+    <br>
+
+    <input class="btns" type="submit" value="Submit changes">
+    </form>
+</div>

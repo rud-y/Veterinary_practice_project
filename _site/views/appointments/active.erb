@@ -1,0 +1,39 @@
+<h2 class="section-header">Appointments</h2>
+    <div class="actions">
+        <li><a class="a" href="/appointments/new">Add new appointment</a></li>
+        <li><a class="a" href="/appointments/active">See all upcoming</a></li>
+    </div>
+    
+    
+    
+<div class="table-wrapper">
+    <table id="appointments-table">
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Pet Name</th>
+            <th>Vet Name</th>
+        </tr>
+        <% @appointments.each do |appointment| %>
+        <% if appointment.is_past == false %>
+        <tr>
+                <td>
+                    <%= appointment.date_string %>
+                </td>
+                <td>
+                    <%= appointment.time_string %>
+                </td>
+                <td>
+                    <%= appointment.pet.name %>
+                </td>
+                <td>
+                    <%= appointment.vet.first_name %> <%= appointment.vet.last_name %>
+                </td>
+                <td class="details-anchor-left-border">
+                    <a class="a" href="/appointments/<%= appointment.id %>/edit">Update</a>
+                </td>
+        </tr>
+        <% end %>
+        <% end %>
+    </table>
+</div>

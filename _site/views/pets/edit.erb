@@ -1,0 +1,22 @@
+<h3 class="section-header">Update information for <%= @pet.name %></h3>
+
+<div class="edit-form">
+    <form id="form" method="post" action="/pets/<%= @pet.id %>">
+    <div class="form-el">    
+        <label for="treatment_notes">Treatment Notes</label>
+        <textarea rows="8" cols="20" id="treatment-notes" name="treatment_notes"> <%= @pet.treatment_notes %> </textarea>
+    </div>
+
+    <div class="form-el">
+        <label for="vet_id">Change vet:</label>
+        <select id="vet-select" name="vet_id">
+            <% @vets.each do |vet| %>
+                <option <%= "selected" if vet.id == @pet.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
+            <% end %>
+        </select>
+    </div>
+
+        <br>
+    <input class="btns" type="submit" value="Submit changes">
+    </form>
+</div>

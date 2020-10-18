@@ -1,0 +1,38 @@
+<h2 class="section-header">Our pet patients</h2>
+
+<div class="actions">
+    <li><a class="a" href="/pets/new">Add new</a></li>
+</div>
+
+    
+<div class="table-wrapper">
+    <table id="pet-table">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>DOB</th>
+            <th>Vet</th>
+            
+        </tr>
+            <% for pet in @pets %>
+            <tr> 
+                <td>
+                    <%= pet.name %>
+                </td>
+                <td>
+                    <%= pet.type %>
+                </td>
+                <td>
+                    <%= pet.date_of_birth %>
+                </td>
+                <td>
+                    <%= pet.vet.first_name %> <%= pet.vet.last_name %>
+                </td>
+                
+                <td class="details-anchor-left-border">
+                    <a class="a" href="/pets/<%= pet.id %>">Details</a>
+                </td>
+            </tr>
+            <% end %>
+    </table>
+</div>

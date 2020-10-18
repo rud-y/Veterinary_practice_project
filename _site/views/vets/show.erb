@@ -1,0 +1,34 @@
+<h2 class="section-header">Vets</h2>
+<h2 class="section-header">Details for: <%= @vet.first_name%> <%= @vet.last_name%></h2>
+
+
+<div class="show-details-wrapper">
+<div class="show-details">
+    <table id="details-table">
+        <tr>
+            <td>Name:</td>
+            <td><b><%= @vet.first_name %> <%= @vet.last_name %></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><%= @vet.phone_number %></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>
+                <%= @vet.e_mail %>
+            </td>
+        </tr>
+    </table>
+</div>  
+
+<div class="btns-wrapper">
+    <a href="/vets/<%= @vet.id %>/edit"><button class="btns">Edit details</button></a>
+    
+    <form method="post" action="/vets/<%= @vet.id %>/delete">
+        <input class="btns" type="submit" value="Delete Vet">
+    </form>
+
+    <a href="/vets"><button class="btns">Back to vets</button></a>
+</div>
+</div>

@@ -1,0 +1,44 @@
+<h2 class="section-header">Customers</h2>
+<h3 class="section-header">Details for: <%= @customer.first_name%> <%= @customer.last_name%></h3>
+    
+
+
+<div class="show-details-wrapper">
+<div class="show-details">
+    <table id="details-table">
+        <tr>
+            <td>Name:</td>
+            <td><b><%= @customer.first_name %> <%= @customer.last_name %></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><%= @customer.phone_number %></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><%= @customer.e_mail %></td>
+        </tr>
+        <tr>
+            <td>Pets:</td>
+                <% @pets = @customer.pets %>
+                <% for pet in @pets %>
+            <td class="show-customer-pet-list">
+                
+                <li><%= pet.name %> - <%= pet.type %> </li>
+                
+            </td>
+                <% end %>
+        </tr>
+    </table>
+</div>  
+
+<div class="btns-wrapper">
+    <a href="/customers/<%= @customer.id %>/edit"><button class="btns">Edit details</button></a>
+    
+    <form method="post" action="/customers/<%= @customer.id %>/delete">
+        <input class="btns" type="submit" value="Delete customer">
+    </form>
+
+    <a href="/customers"><button class="btns">Back to customers</button></a>
+</div>
+</div>
