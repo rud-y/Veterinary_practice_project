@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('../models/pet')
-# also_reload('../models/*')
+
 
 
 get '/pets' do 
