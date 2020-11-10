@@ -3,7 +3,7 @@ body{
 }
 
 #content {
-  border: solid 4px black;
+  border: solid 1px black;
   background-color: rgb(218, 197, 171);
   position: relative;
 }
