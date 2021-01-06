@@ -14,8 +14,8 @@ class Appointment
     end
 
     def date_string()
-        date = Date.parse(@date)
-        return date.strftime("%d %B %y")
+        date = Time.parse(@date)
+        return date.strftime('%d / %m / %y')
     end
 
     def time_string()
