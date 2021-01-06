@@ -1,5 +1,5 @@
-body{
-    font-family: 'IM Fell DW Pica', serif;
+body {
+  font-family: "IM Fell DW Pica", serif;
 }
 
 #content {
@@ -8,8 +8,12 @@ body{
   position: relative;
 }
 
-h1, h2, h3, h4, h5{
-  font-family: 'Fredoka One', cursive;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fredoka One", cursive;
 }
 h4 a {
   text-decoration: none;
@@ -20,15 +24,15 @@ h4 a {
   text-align: center;
 }
 
-#top-head-container{
+#top-head-container {
   display: flexbox;
   flex-flow: column wrap;
   justify-content: center;
-  background-color:white;
+  background-color: white;
   padding-bottom: 0.2rem;
   border-radius: 0.2rem;
 }
-.top-head-item{
+.top-head-item {
   display: flex;
   justify-content: center;
 }
@@ -37,7 +41,7 @@ h4 a {
   display: flex;
 }
 
-#menu  li {
+#menu li {
   list-style: none;
   margin-right: 1rem;
 }
@@ -55,7 +59,7 @@ h4 a {
 }
 
 #logo {
-  max-width:150px;
+  max-width: 150px;
   max-height: 110px;
 }
 
@@ -63,16 +67,16 @@ h4 a {
   display: flex;
   justify-content: center;
 }
-.section-header{
+.section-header {
   display: flex;
   justify-content: center;
-  }
+}
 
 .actions {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding-bottom:5px;
+  padding-bottom: 5px;
   border-bottom: white solid 1px;
 }
 .actions li a {
@@ -87,7 +91,6 @@ h4 a {
 .a {
   text-decoration: none;
   color: black;
-  
 }
 
 a {
@@ -96,7 +99,7 @@ a {
 }
 
 .a:hover {
-  color:black;
+  color: black;
   text-decoration: underline;
   border-radius: 8px;
 }
@@ -125,11 +128,13 @@ a {
   width: 100%;
 }
 
-table{
+table {
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
+  border: solid 1px black;
   padding: 20px, 20px, 20px, 20px;
   width: 180px;
   text-align: left;
@@ -145,9 +150,8 @@ tr:hover {
   background-color: whitesmoke;
 }
 
-.details-anchor-left-border{
-  border-left: solid black 0.1rem;
-  /* margin-left: 3px; */
+.details-anchor-left-border {
+  /* border-left: solid black 0.1rem; */
   background-color: rgb(218, 197, 171);
 }
 
@@ -185,19 +189,18 @@ tr:hover {
   align-self: center;
   height: 1.5rem;
   width: 8rem;
-  background-color:white;
+  background-color: white;
   border: black solid 1px;
   margin-right: 1em;
 }
 .btns:hover {
-  background-color:rgb(218, 197, 171);
+  background-color: rgb(218, 197, 171);
   border: white solid 2px;
 }
 
-
 /* Forms: New , Edit */
 
-label{
+label {
   float: left;
   clear: left;
   width: 150px;
@@ -206,7 +209,9 @@ label{
   margin-bottom: 2em;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 120px;
   float: left;
   height: 20px;
