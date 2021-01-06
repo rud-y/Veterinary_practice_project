@@ -4,10 +4,10 @@
     <form id="form" method="post" action="/appointments/<%= @appointment.id %>">
         
         <label for="date">Date:</label>
-        <input type="date" name="date"  value="<% @appointment.date_string %>" required>
+        <input type="date" name="date"  value="<%= @appointment.date_string %>" required>
             
         <label for="time">Time:</label>
-        <input type="time" name="time" value="<% @appointment.time %>" required>
+        <input type="time" name="time" value="<%= @appointment.time_string %>" required>
 
         <label for="pet_id">Change pet:</label>
         <select id="pet-select" name="pet_id">
@@ -20,7 +20,7 @@
         <label for="vet_id">Change vet:</label>
         <select id="vet-select" name="vet_id">
             <% @vets.each do |vet| %>
-                <option <%= "selected" if vet.id == @appointment.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
+                <option <% "selected" if vet.id == @appointment.vet_id %> value="<%= vet.id %>"><%= vet.first_name %> <%= vet.last_name %></option>
             <% end %>
         </select>
         <br>
