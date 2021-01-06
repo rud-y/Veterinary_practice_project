@@ -18,11 +18,11 @@
         </tr>
         <tr>
             <td>Owner:</td>
-            <td><a href="/customers/<%= @pet.customer_id %>"> <%= @pet.customer.first_name %> <%= @pet.customer.last_name %></a></td>
+            <td><a href="/customers/<%= @pet.customer_id %>"> <strong><%= @pet.customer.first_name %> <%= @pet.customer.last_name %></strong> </a></td>
         </tr>
         <tr>
             <td>Vet assigned:</td>
-            <td><a href="/vets/<%= @pet.vet_id %>"> <%= @pet.vet.first_name %> <%= @pet.vet.last_name %></a></td>
+            <td><a href="/vets/<%= @pet.vet_id %>"> <strong><%= @pet.vet.first_name %> <%= @pet.vet.last_name %></strong> </a></td>
         </tr>
         <tr>
             <td>Treatment Notes:</td>
