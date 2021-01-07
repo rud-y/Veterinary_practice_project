@@ -4,7 +4,7 @@
     <form id="form" method="post" action="/appointments/<%= @appointment.id %>">
         
         <label for="date">Date:</label>
-        <input type="date" name="date"  value="<%= @appointment.date_string %>" required>
+        <input type="date" name="date" placeholder="<%= @appointment.date_string %>" required>
             
         <label for="time">Time:</label>
         <input type="time" name="time" value="<%= @appointment.time_string %>" required>
