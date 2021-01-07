@@ -25,7 +25,7 @@
                 <% for pet in @pets %>
             <td class="show-customer-vet-pet-list">
                 
-                <li><%= pet.name %> : <%= pet.customer.firstname %> <%= pet.customer.lastname %></li>
+                <li><%= pet.type %> <%= pet.name %> (<%= pet.customer.first_name %> <%= pet.customer.last_name %>)</li>
                 
             </td>
                 <% end %>

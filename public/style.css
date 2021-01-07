@@ -15,8 +15,11 @@ h4,
 h5 {
   font-family: "Fredoka One", cursive;
 }
-h4 a {
-  text-decoration: none;
+h4 {
+  text-align: center;
+}
+.here-link {
+  color: whitesmoke;
 }
 
 #welcome-header {
@@ -184,13 +187,13 @@ tr:hover {
   justify-content: center;
 }
 .btns {
-  display: inline;
+  display: flex;
   align-self: center;
   height: 1.5rem;
-  width: 8rem;
+  width: 6rem;
   background-color: white;
   border: black solid 1px;
-  margin-right: 1em;
+  margin-right: 0.6em;
 }
 .btns:hover {
   background-color: rgb(218, 197, 171);
