@@ -19,6 +19,17 @@
                 <%= @vet.e_mail %>
             </td>
         </tr>
+        <tr>
+            <td>Assigned pets:</td>
+                <% @pets = @vet.pets %>
+                <% for pet in @pets %>
+            <td class="show-customer-vet-pet-list">
+                
+                <li><%= pet.name %> : <%= pet.customer.firstname %> <%= pet.customer.lastname %></li>
+                
+            </td>
+                <% end %>
+        </tr>
     </table>
 </div>  
 

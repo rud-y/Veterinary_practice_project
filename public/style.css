@@ -154,7 +154,7 @@ tr:hover {
   background-color: rgb(218, 197, 171);
 }
 
-.show-customer-pet-list {
+.show-customer-vet-pet-list {
   list-style: none;
   display: list-item;
 }
@@ -195,6 +195,7 @@ tr:hover {
 .btns:hover {
   background-color: rgb(218, 197, 171);
   border: white solid 2px;
+  font-weight: bolder;
 }
 
 /* Forms: New , Edit */
