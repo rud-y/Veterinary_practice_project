@@ -4,7 +4,7 @@ body {
 
 #content {
   border: solid 1px black;
-  background-color: rgb(218, 197, 171);
+  background-color: #839b97;
   position: relative;
 }
 
@@ -31,7 +31,7 @@ h4 {
   display: flexbox;
   flex-flow: column wrap;
   justify-content: center;
-  background-color: white;
+  background-color: #f2efea;
   padding-bottom: 0.2rem;
   border-radius: 0.2rem;
 }
@@ -57,13 +57,13 @@ h4 {
   text-decoration: underline;
 }
 #logo-wrapper {
-  /* display: flex; */
   justify-content: center;
 }
 
 #logo {
   max-width: 150px;
   max-height: 110px;
+  background-color: #f2efea;
 }
 
 .section-header-new-pet {
@@ -117,15 +117,9 @@ a {
   padding: 20px;
 }
 
-#customer-table {
+#index-table {
   width: 100%;
-  border-spacing: 0 15px;
-}
-#pet-table {
-  width: 100%;
-}
-#vet-table {
-  width: 100%;
+  border-spacing: 5px 0px;
 }
 #appointment-table {
   width: 100%;
@@ -146,7 +140,7 @@ th {
 th {
   font-size: 20px;
   font-weight: bold;
-  background-color: rgb(218, 197, 171);
+  background-color: #839b97;
 }
 tr:hover {
   background-color: whitesmoke;
@@ -154,7 +148,7 @@ tr:hover {
 
 .details-anchor-left-border {
   /* border-left: solid black 0.1rem; */
-  background-color: rgb(218, 197, 171);
+  background-color: #839b97;
 }
 
 .show-customer-vet-pet-list {
@@ -175,11 +169,12 @@ tr:hover {
 }
 .show-details {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0 auto;
   max-width: 550px;
   padding: 20px 30px 30px 30px;
 }
+
 .btns-wrapper {
   margin: 0 auto;
   display: flex;
@@ -187,18 +182,38 @@ tr:hover {
   justify-content: center;
 }
 .btns {
-  display: flex;
+  display: inline;
   align-self: center;
   height: 1.5rem;
-  width: 6rem;
-  background-color: white;
+  width: 140px;
+  background-color: #cfd3ce;
   border: black solid 1px;
   margin-right: 0.6em;
 }
-.btns:hover {
-  background-color: rgb(218, 197, 171);
+.btn {
+  display: block;
+  width: 120px;
+  height: 1.5rem;
+  float: right;
+  background-color: #cfd3ce;
+  border: black solid 1px;
+}
+.btn:hover {
+  background-color: #abbba8;
   border: white solid 2px;
   font-weight: bolder;
+}
+.btns:hover {
+  background-color: #abbba8;
+  border: white solid 2px;
+  font-weight: bolder;
+}
+
+.btn-created-back {
+  align-self: center;
+}
+.h3-created {
+  text-align: center;
 }
 
 /* Forms: New , Edit */
@@ -206,10 +221,10 @@ tr:hover {
 label {
   float: left;
   clear: left;
-  width: 150px;
+  width: 110px;
   text-align: right;
   margin-right: 1.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 input,
