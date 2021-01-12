@@ -20,7 +20,7 @@
         <label for="vet_id">Change vet:</label>
         <select id="vet-select" name="vet_id">
             <% @vets.each do |vet| %>
-                <option <%= "selected" if vet.id == @appointment.vet_id %> value="<%= @appointment.vet.id %>"><%= @appointment.vet.first_name %> <%= @appointment.vet.last_name %></option>
+                <option <%= "selected" if vet.id == @appointment.vet_id %> value="<%= vet.id %>"> <%= vet.first_name %> <%= vet.last_name %></option>
             <% end %>
         </select>
         <br>
