@@ -40,8 +40,8 @@ post '/customers/:id' do
 end
 
 post '/customers/:id/delete' do
-    customer = Customer.find(params['id'])
-    customer.delete
+    @customer = Customer.find(params['id'])
+    @customer.delete
     redirect to '/customers'
 end
 

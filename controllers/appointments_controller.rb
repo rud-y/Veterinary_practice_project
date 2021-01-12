@@ -49,10 +49,8 @@ post '/appointments/:id' do
     redirect to '/appointments'
 end
 
-
-
 # DELETE
-post '/appointments/:id/delete' do
+get '/appointments/:id/delete' do
     @appointment = Appointment.find(params['id'])
     @appointment.delete
     redirect to '/appointments'

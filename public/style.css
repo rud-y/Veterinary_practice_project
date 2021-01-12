@@ -7,6 +7,7 @@ body {
   border: solid 1px black;
   background-color: #839b97;
   position: relative;
+  min-height: 600px;
 }
 
 h1,
@@ -20,7 +21,7 @@ h4 {
   text-align: center;
 }
 .here-link {
-  color: whitesmoke;
+  text-decoration: underline;
 }
 
 #welcome-header {
@@ -144,7 +145,7 @@ th {
   background-color: #839b97;
 }
 tr:hover {
-  background-color: whitesmoke;
+  background-color: rgb(197, 195, 195);
 }
 
 .details-anchor-left-border {
@@ -193,7 +194,7 @@ tr:hover {
 }
 .btn {
   display: block;
-  width: 120px;
+  width: 140px;
   height: 1.5rem;
   float: right;
   background-color: #cfd3ce;
@@ -201,19 +202,16 @@ tr:hover {
 }
 .btn:hover {
   background-color: #abbba8;
-  border: white solid 2px;
-  font-weight: bolder;
 }
 .btns:hover {
   background-color: #abbba8;
-  border: white solid 2px;
   font-weight: bolder;
 }
 
-.btn-created-back {
-  align-self: center;
-}
-.h3-created {
+.fb-back {
+  display: block;
+  margin: 0 auto;
+  width: 550px;
   text-align: center;
 }
 
